@@ -1,22 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void foo()
+double foo_2(int n)
 {
-    static int n=5; // usuñ static
-    n++;
-    printf("%i",n);
+    return n;
+}
+
+double foo(double(*liczba)(int),int n)
+{
+    return liczba(n);
 }
 
 int main()
 {
-    foo();
-    foo();
-    foo();
-    foo();
-    foo();
-    const a=5;
-    //a++;
-    printf("%i",a);
+    printf("%lf",foo(foo_2,5));
     return 0;
 }

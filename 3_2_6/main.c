@@ -1,16 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void foo(int i, int *w)
+void foo(int n , int *w)
 {
-    *w=i;
+	*w=n;
 }
 
 int main()
 {
-    int w=123;
-    printf("%i\n",w);
-    foo(5,&w);
-    printf("%i",w);
-    return 0;
+	static int x=2,y=6;
+	foo(x,&y);
+	printf("%d %d",x,y);
+	return 0;
 }

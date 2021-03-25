@@ -10,8 +10,8 @@ int main()
 {
     const int i=5;
     int o=9;
-    printf("%i %i", i , o);
+    printf("%d %d\n", i , o);
     foo(&i,&o);
-    printf("%i %i", i , o);
+    printf("%d %d\n", i , o);
     return 0;
 }

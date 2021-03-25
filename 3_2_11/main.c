@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int *foo(int n)
+int* foo(int n)
 {
-    return malloc(n*sizeof(double));
+    return malloc(n*sizeof(int));
 }
 
 int main()
 {
-    printf("%p",foo(4));
+    int n=5;
+    printf("%p",foo(n));
     return 0;
 }
