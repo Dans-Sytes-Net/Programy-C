@@ -11,8 +11,9 @@ double foo(double(*liczba)(int),int n)
     return liczba(n);
 }
 
+
 int main()
 {
-    printf("%lf",foo(foo_2,5));
+    printf("%lf\n",foo(foo_2,5));
     return 0;
 }

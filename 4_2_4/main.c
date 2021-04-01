@@ -20,12 +20,12 @@ void wypisz(int n, int tab[])
 
 int main()
 {
-    int i=5,tab[5];
+    int n=5,tab[5];
     for(int i=0;i<5;i++)
     {
         tab[i]=i+1;
     }
-    wypisz(i,tab);
-    printf("%f",foo(i,tab));
+    wypisz(n,tab);
+    printf("%f",foo(n,tab));
     return 0;
 }
