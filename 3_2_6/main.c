@@ -7,7 +7,7 @@ void foo(int n , int *w)
 
 int main()
 {
-	static int x=2,y=6;
+	int x=2,y=6;
 	foo(x,&y);
 	printf("%d %d",x,y);
 	return 0;

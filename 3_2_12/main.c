@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int* foo(int n)
+double* foo(int n)
 {
     return malloc(n*sizeof(double));
 }
