@@ -15,7 +15,7 @@ int size_wt(wchar_t a[])
 	return i;
 }
 
-void sklej(char *nap, char *nap2,char *nap3)
+void sklej(char nap[], char nap2[],char nap3[])
 {
 	int i=0,o=0;
 	while(i<size(nap))
@@ -32,7 +32,7 @@ void sklej(char *nap, char *nap2,char *nap3)
 	nap3[i]='\0';
 }
 
-void sklej_wt(wchar_t *nap, wchar_t *nap2,wchar_t *nap3)
+void sklej_wt(wchar_t nap[], wchar_t nap2[],wchar_t nap3[])
 {
 	int i=0,o=0;
 	while(i<size_wt(nap))
@@ -47,15 +47,6 @@ void sklej_wt(wchar_t *nap, wchar_t *nap2,wchar_t *nap3)
 		o++;
 	}
 	nap3[i]='\0';
-
-	/*  LUB
-        int i=0;
-        while(*(nap+i)=!0)
-        {
-            nap3[i]=nap[i];
-            i++;
-        }
-	*/
 }
 
 
