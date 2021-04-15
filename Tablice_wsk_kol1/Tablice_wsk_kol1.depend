@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1618477748 source:f:\projekty\dans_sytes_net\programy-c\tablice_wsk_kol1\main.c
+	<stdio.h>
+	<stdlib.h>
+
