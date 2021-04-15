@@ -9,6 +9,7 @@ void przepisz(char napis1[],char napis2[])
         *(napis2+i)=*(napis1+i);
         i++;
     }
+    *(napis2+i)='\0';
 }
 
 void przepisz_wchar(wchar_t napis1[],wchar_t napis2[])
@@ -18,15 +19,16 @@ void przepisz_wchar(wchar_t napis1[],wchar_t napis2[])
         *(napis2+i)=*(napis1+i);
         i++;
     }
+    *(napis2+i)='\0';
 }
 
 int main()
 {
     char nap[] = "Hello"; wchar_t wnap[] = L"Hello";
-    char napis[6]; wchar_t napis2[6];
+    char napis[]="HelloWor"; wchar_t napis2[]=L"World";
     przepisz(nap,napis);
     przepisz_wchar(wnap,napis2);
     printf("%s\n",napis);
-    wprintf(L"%s\n",napis2);
+    wprintf(L"%s\n\n",napis2);
     return 0;
 }
