@@ -27,7 +27,7 @@ int min(int n,int tab[],int in)
 	else return index(n,min, tab);
 }
 
-int bezw(int n,int tab[],int m)
+int bezw(int n,int tab[],int min_p)
 {
 	int i;
 	int tab_bezw[n];
@@ -36,7 +36,7 @@ int bezw(int n,int tab[],int m)
 		if(tab[i]<0) tab_bezw[i]=tab[i]*-1;
 		else tab_bezw[i]=tab[i];
 	}
-	if(m==0) return max(n,tab_bezw,0);
+	if(min_p==0) return max(n,tab_bezw,0);
 	else return min(n,tab_bezw,0);
 
 }

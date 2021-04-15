@@ -9,7 +9,7 @@ int sum(int n, int tab[])
 	return sum;
 }
 
-double avg(int n,const int tab[])
+double avg(int n,int tab[])
 {
 	return sum(n,tab)/(double)(n);
 }

@@ -21,14 +21,12 @@ void max_tab(int n,int tab1[],int tab2[],int tab3[])
 void move(int n , int tab1[],int tab2[],int tab3[])
 {
     int temp_tab[n];
-    for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++){
         temp_tab[i] = tab3[i];
-    for(int i=0;i<n;i++)
         tab3[i]=tab2[i];
-    for(int i=0;i<n;i++)
         tab2[i]=tab1[i];
-    for(int i=0;i<n;i++)
         tab1[i]=temp_tab[i];
+    }
 }
 
 void wypisz(int n,int tab[])
