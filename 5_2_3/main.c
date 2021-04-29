@@ -3,7 +3,7 @@
 int dlugosc(char nap[])
 {
 	int i=0;
-	while(nap[i]!=NULL)	i++;
+	while(nap[i]!='\0')	i++;
 	return i;
 }
 

@@ -1,5 +1,3 @@
-void wyczysc_wchar(wchar_t *);
-
 #include <stdio.h>
 
 void wyczysc(char list[])
@@ -22,9 +20,4 @@ int main()
 	wyczysc_wchar(napis);
 	wprintf(L"%s",napis);
 	return 0;
-}
-
-void wyczysc_wchar(wchar_t lista[])
-{
-	lista[0] = '\0';
 }

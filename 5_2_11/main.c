@@ -23,6 +23,9 @@ void wytnij(char * nap1 ,char * nap2 )
 int main()
 {
 	char nap[] = "abc";
+	printf("%d\n",sizeof(NULL));
+	printf("%d\n",sizeof(char));
+	printf("%d\n",NULL);
 	char nap2[] = "alfabet";
 	wytnij(nap2,nap);
 	printf("%s",nap2);

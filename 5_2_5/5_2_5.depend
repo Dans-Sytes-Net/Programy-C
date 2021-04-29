@@ -1,6 +1,5 @@
 # depslib dependency file v1.0
-1618480543 source:f:\projekty\dans_sytes_net\programy-c\5_2_5\main.c
+1619603582 source:f:\projekty\dans_sytes_net\programy-c\5_2_5\main.c
 	<stdio.h>
 	<stdlib.h>
-	<malloc.h>
 

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
 
 void przepisz(char napis1[],char napis2[])
 {
