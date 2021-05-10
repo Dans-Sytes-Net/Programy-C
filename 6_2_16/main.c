@@ -12,8 +12,9 @@ int **foo(int n , int m)
 
 int max_index(int n,int m, int **wsk){
     int index=-1;
+    double avg=0;
     for(int i=0;i<n;i++){
-        double avg=0, suma=0;
+        double suma=0;
         for(int o=0;o<m;o++){
             suma += *(*(wsk+i)+o);
         }
@@ -28,7 +29,7 @@ int max_index(int n,int m, int **wsk){
 void wpisz(int n,int m, int **wsk){
     for(int i=0;i<n;i++){
         for(int o=0;o<m;o++){
-            *(*(wsk+i)+o)=i+o;
+            *(*(wsk+i)+o)=o; //tab[i][o]
         }
     }
 }
