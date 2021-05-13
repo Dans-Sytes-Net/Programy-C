@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1620895192 source:f:\projekty\dans_sytes_net\programy-c\7_2_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
