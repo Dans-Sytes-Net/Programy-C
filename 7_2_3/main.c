@@ -20,7 +20,10 @@ double odleglosc(struct pkt tab[], int n){
 
 int main()
 {
-    struct pkt tab[] = {{.x=5,.y=7,.z=8},{.x=3,.y=4,.z=5},{.x=1,.y=2,.z=3},{.x=1,.y=2,.z=3}};
+    struct pkt tab[] = {{.x=5,.y=7,.z=8},
+                        {.x=3,.y=4,.z=5},
+                        {.x=1,.y=2,.z=3},
+                        {.x=1,.y=2,.z=3}};
     printf("%lf",odleglosc(tab,2));
     return 0;
 }
