@@ -17,11 +17,16 @@ void wczytaj_s(struct auto_s * s){
 }
 
 void najtanszy(struct auto_s * s,float min_cena,int n){
+    printf("Ponizej ceny %.2f:\n",min_cena);
     for(int i=0;i<n;i++){
-        if((s+i)->cena < min_cena) {
-            printf("Ponizej ceny %.2f:\n",min_cena);
-            wypisz((s+i));
-        }
+        if((s+i)->cena < min_cena) wypisz((s+i));
+    }
+}
+
+void wyszukaj_po_marce(struct auto_s *s, char *marka,int n){
+    printf("Wyszukane po marce %s:\n",marka);
+    for(int i=0;i<n;i++){
+        if((s+i)->marka == marka) wypisz((s+i)); // Problem z porównaniem dwóch napisów
     }
 }
 
@@ -37,8 +42,9 @@ int main()
     struct auto_s *tab = malloc(2*sizeof(struct auto_s));
     for(int i=0;i<2;i++)
         wczytaj_s(tab+i);
-    for(int i=0;i<2;i++)
-        wypisz(tab+i);
+    //for(int i=0;i<2;i++)
+        //wypisz(tab+i);
+    wyszukaj_po_marce(tab,"Ford",2);
     najtanszy(tab,1500,2);
     return 0;
 }
