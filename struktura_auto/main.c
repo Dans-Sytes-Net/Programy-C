@@ -2,18 +2,24 @@
 #include <stdlib.h>
 
 struct auto_s{
-    char model[20];
-    char marka[20];
+    char *model;
+    char *marka;
     float cena;
 };
 
 void wczytaj_s(struct auto_s * s){
     printf("Podaj model: ");
-    scanf("%s",&s->model);
+    s->marka=malloc(20*sizeof(char));
+    s->model=malloc(20*sizeof(char));
+    scanf("%19s",s->model);
     printf("Podaj marke: ");
-    scanf("%s",&s->marka);
+    scanf("%19s",s->marka);
     printf("Podaj cene: ");
     scanf("%f",&s->cena);
+}
+
+void wypisz(struct auto_s * s){
+    printf("%s %s %.2f \n\n",s->marka,s->model,s->cena);
 }
 
 void najtanszy(struct auto_s * s,float min_cena,int n){
@@ -23,22 +29,18 @@ void najtanszy(struct auto_s * s,float min_cena,int n){
     }
 }
 
-void wyszukaj_po_marce(struct auto_s *s, char *marka,int n){
-    printf("Wyszukane po marce %s:\n",marka);
+void wyszukaj_po_marce(struct auto_s *s, char *marka_s,int n){
+    printf("Wyszukane po marce %s:\n",marka_s);
     for(int i=0;i<n;i++){
-        if((s+i)->marka == marka) wypisz((s+i)); // Problem z porównaniem dwóch napisów
+        if(*((s+i)->marka) == *marka_s) wypisz((s+i));
     }
-}
-
-void wypisz(struct auto_s * s){
-    printf("%s %s %.2f \n\n",s->marka,s->model,s->cena);
 }
 
 int main()
 {
-    struct auto_s *sam1 = malloc(sizeof(struct auto_s));
+    /*struct auto_s *sam1 = malloc(sizeof(struct auto_s));
     wczytaj_s(sam1);
-    wypisz(sam1);
+    wypisz(sam1); WPISUJE AUTO DO JEDNEJ STRUKTURY */
     struct auto_s *tab = malloc(2*sizeof(struct auto_s));
     for(int i=0;i<2;i++)
         wczytaj_s(tab+i);
