@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1621864075 source:f:\projekty\dans_sytes_net\programy-c\lista_jednokier_bezglowy\main.c
+	<stdio.h>
+	<stdlib.h>
+
