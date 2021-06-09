@@ -15,7 +15,7 @@ void wypisz_str_head(struct element *elem){
 }
 
 void wyczysc(struct element *elem){
-    struct element *temp=elem->next;
+    struct element *temp=elem;
     elem=temp;
     while(elem!=NULL){
         elem=elem->next;
